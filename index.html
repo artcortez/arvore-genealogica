@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Genealogia dos Deuses Gregos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <!-- Caixa de boas-vindas -->
+  <div id="welcome-modal">
+    <div class="modal-content">
+      <h1>Bem-vindo(a)!</h1>
+      <p>Este site é um trabalho dos alunos:</p>
+        <div>Arthur Gabriel Cortez Fernandes</div>
+        <div>Davi Carlos da Costa Felix</div>
+        <div>Gilson Teixeira de Oliveira Filho</div>
+        <div>Marcelly Hevelyn Fernandes Gois</div>
+        <div>Maria Júlia Silva Moura</div>
+      <p>para a disciplina <strong>História Antiga II</strong>, ministrada pelo professor <strong>Dr. Caio de Amorim
+          Féo</strong> no curso de <strong>Licenciatura em História da Uiversidade Federal do Rio Grande do Norte (UFRN)</strong>.</p>
+      <h2>Tema: Genealogia dos Deuses Gregos</h2>
+      <button id="close-modal">Entrar no site</button>
+    </div>
+  </div>
+
+  <div id="info-modal">
+    <div class="modal-content">
+      <img src="" alt="">
+      <h2></h2>
+      <p></p>
+      <button id="close-info-modal">Fechar</button>
+    </div>
+  </div>
+
+  <div id="site-title">Genealogia dos Deuses Gregos</div>
+
+  <!-- Canvas -->
+  <div id="viewport">
+    <div id="canvas">
+      <main>
+        <!-- Nodes Primordiais -->
+        <div class="node caos" style="top: 390px; left: 1140px;" data-name="Caos"
+          data-desc="Caos é a entidade primordial, a primeira forma da existência, a desordem original, um vazio primordial que precedeu a criação do universo (o cosmos). Não é necessariamente uma divindade no sentido tradicional, mas sim um espaço abstrato, o abismo, de onde surgiram as primeiras divindades, como Gaia (Terra), Tártaro (Submundo), Eros (Desejo), Érebo (Trevas) e Nix (Noite)."
+          data-img="./images/Caos.jpg">
+          <img src="./images/Caos.jpg" alt="Caos">
+          <span>Caos</span>
+        </div>
+
+        <div class="node gaia" style="top: 510px; left: 877px;" data-name="Gaia"
+          data-desc="Gaia é a deusa primordial da Terra, mãe de Urano, Pontos, Oureas, Titãs e Gigantes."
+          data-img="./images/Gaia2.jpg">
+          <img src="./images/Gaia2.jpg" alt="Gaia">
+          <span>Gaia</span>
+        </div>
+
+        <div class="node tartaro" style="top: 520px; left: 650px;" data-name="Tártaro"
+          data-desc="Tártaro é o deus primordial do Submundo, lugar de punição e tormento."
+          data-img="./images/Tartaro.png">
+          <img src="./images/Tartaro.png" alt="Tártaro">
+          <span>Tártaro</span>
+        </div>
+
+        <div class="node eros" style="top: 518px; left: 1340px;" data-name="Eros"
+          data-desc="Eros é o deus primordial do Desejo, força que gera a união entre os deuses e os mortais."
+          data-img="./images/Eros.jpg">
+          <img src="./images/Eros.jpg" alt="Eros">
+          <span>Eros</span>
+        </div>
+
+        <div class="node erebo" style="top: 518px; left: 1480px;" data-name="Érebo"
+          data-desc="Érebo representa as trevas profundas, irmão de Nix." data-img="./images/Erebo.jpg">
+          <img src="./images/Erebo.jpg" alt="Érebo">
+          <span>Érebo</span>
+        </div>
+
+        <div class="node nix" style="top: 518px; left: 1667px;" data-name="Nix"
+          data-desc="Nix é a deusa da noite, mãe de Éter e Hemera." data-img="./images/Nix.jpg">
+          <img src="./images/Nix.jpg" alt="Nix">
+          <span>Nix</span>
+        </div>
+
+        <div class="node urano" style="top: 625px; left: 1260px;" data-name="Urano"
+          data-desc="Urano é o deus primordial do Céu, filho e esposo de Gaia, pai dos Titãs, Ciclopes e Hecatônquiros."
+          data-img="./images/Urano.jpg">
+          <img src="./images/Urano.jpg" alt="Urano">
+          <span>Urano</span>
+        </div>
+
+        <div class="node tifao" style="top: 600px; left: 530px;" data-name="Tifão"
+          data-desc="Tifão é uma força caótica da destruição, inimigo dos deuses olímpicos."
+          data-img="./images/Tifao.jpg">
+          <img src="./images/Tifao.jpg" alt="Tifão">
+          <span>Tifão</span>
+        </div>
+
+        <div class="node oureas" style="top: 580px; left: 950px;" data-name="Oureas"
+          data-desc="Oureas são os deuses das montanhas, filhos de Gaia." data-img="./images/Oureas.png">
+          <img src="./images/Oureas.png" alt="Oureas">
+          <span>Oureas</span>
+        </div>
+
+        <div class="node pontos" style="top: 620px; left: 856px;" data-name="Pontos"
+          data-desc="Pontos é o deus primordial do Mar, filho de Gaia." data-img="./images/Pontos.jpg">
+          <img src="./images/Pontos.jpg" alt="Pontos">
+          <span>Pontos</span>
+        </div>
+
+        <div class="node ciclopes" style="top: 590px; left: 1060px;" data-name="Ciclopes"
+          data-desc="Os Ciclopes são filhos de Gaia e Urano, conhecidos por seus únicos olhos."
+          data-img="./images/Ciclopes.png">
+          <img src="./images/Ciclopes.png" alt="Ciclopes">
+          <span>Ciclopes</span>
+        </div>
+
+        <div class="node hecatonquiros" style="top: 640px; left: 1022px;" data-name="Hecatônquiros"
+          data-desc="Os Hecatônquiros são filhos de Gaia e Urano, gigantes com cem braços."
+          data-img="./images/Hecatonquiros.jpg">
+          <img src="./images/Hecatonquiros.jpg" alt="Hecatônquiros">
+          <span>Hecatônquiros</span>
+        </div>
+
+        <div class="node afrodite" style="top: 710px; left: 1320px;" data-name="Afrodite"
+          data-desc="Afrodite é a deusa do amor, da beleza e do desejo." data-img="./images/Afrodite.png">
+          <img src="./images/Afrodite.png" alt="Afrodite">
+          <span>Afrodite</span>
+        </div>
+
+        <div class="node furias" style="top: 627px; left: 1480px;" data-name="Fúrias"
+          data-desc="As Fúrias são deusas da vingança e punição dos crimes familiares." data-img="./images/Furias.jpg">
+          <img src="./images/Furias.jpg" alt="Fúrias">
+          <span>Fúrias</span>
+        </div>
+
+        <div class="node eter" style="top: 585px; left: 1665px;" data-name="Éter"
+          data-desc="Éter é o deus primordial da luz celestial e ar superior." data-img="./images/Eter.jpg">
+          <img src="./images/Eter.jpg" alt="Éter">
+          <span>Éter</span>
+        </div>
+
+        <div class="node hemera" style="top: 650px; left: 1650px;" data-name="Hemera"
+          data-desc="Hemera é a deusa do dia, filha de Nix e Érebo." data-img="./images/Hemera.jpeg">
+          <img src="./images/Hemera.jpeg" alt="Hemera">
+          <span>Hemera</span>
+        </div>
+
+        <div class="node moiras" style="top: 585px; left: 1838px;" data-name="Moiras"
+          data-desc="As Moiras são as deusas do destino, que tecem a vida dos mortais e deuses."
+          data-img="./images/Moiras.jpg">
+          <img src="./images/Moiras.jpg" alt="Moiras">
+          <span>Moiras</span>
+        </div>
+
+        <div class="node hesperides" style="top: 587px; left: 1920px;" data-name="Hespérides"
+          data-desc="As Hespérides são ninfas guardiãs das maçãs douradas no jardim do oeste."
+          data-img="./images/Hesperides.jpg">
+          <img src="./images/Hesperides.jpg" alt="Hespérides">
+          <span>Hespérides</span>
+        </div>
+
+        <div class="node nemesis" style="top: 585px; left: 2085px;" data-name="Nêmesis"
+          data-desc="Nêmesis é a deusa da vingança e da justiça divina." data-img="./images/Nemesis.jpeg">
+          <img src="./images/Nemesis.jpeg" alt="Nêmesis">
+          <span>Nêmesis</span>
+        </div>
+
+        <div class="node forcis" style="top: 690px; left: 650px;" data-name="Fórcis"
+          data-desc="Fórcis é uma divindade marinha, filho de Ponto e Gaia, pai de monstros marinhos como as Greias e as Górgonas."
+          data-img="./images/Forcis.jpg">
+          <img src="./images/Forcis.jpg" alt="Fórcis">
+          <span>Fórcis</span>
+        </div>
+
+        <div class="node ceto" style="top: 690px; left: 840px;" data-name="Ceto"
+          data-desc="Ceto é uma deusa marinha primordial, associada a monstros marinhos e mãe de várias criaturas monstruosas."
+          data-img="./images/Ceto.jpeg">
+          <img src="./images/Ceto.jpeg" alt="Ceto">
+          <span>Ceto</span>
+        </div>
+
+        <div class="node euribia" style="top: 690px; left: 990px;" data-name="Euríbia"
+          data-desc="Euríbia é uma deusa marinha que representa o poder e a força do mar, filha de Ponto e Gaia."
+          data-img="./images/Euribia.jpg">
+          <img src="./images/Euribia.jpg" alt="Euríbia">
+          <span>Euríbia</span>
+        </div>
+
+        <div class="node cerbero" style="top: 688px; left: 290px;" data-name="Cérbero"
+          data-desc="Cérbero é o cão monstruoso de três cabeças que guarda as portas do Hades."
+          data-img="./images/Cerbero.jpg">
+          <img src="./images/Cerbero.jpg" alt="Cérbero">
+          <span>Cérbero</span>
+        </div>
+
+        <div class="node hidra" style="top: 750px; left: 280px;" data-name="Hidra de Lerna"
+          data-desc="A Hidra de Lerna é um monstro aquático com várias cabeças, derrotada por Hércules em seus doze trabalhos."
+          data-img="./images/Hidra.jpeg">
+          <img src="./images/Hidra.jpg" alt="Hidra de Lerna">
+          <span>Hidra de Lerna</span>
+        </div>
+
+        <div class="node leao" style="top: 820px; left: 275px;" data-name="Leão de Neméia"
+          data-desc="O Leão de Neméia é uma criatura invulnerável derrotada por Hércules em seu primeiro trabalho."
+          data-img="./images/Leao.jpg">
+          <img src="./images/Leao.jpg" alt="Leão de Neméia">
+          <span>Leão de Neméia</span>
+        </div>
+
+        <div class="node dragaocolquida" style="top: 880px; left: 290px;" data-name="Dragão de Cólquida"
+          data-desc="O Dragão da Cólquida guardava o velo de ouro no jardim sagrado de Ares."
+          data-img="./images/DragaoColquida.jpg">
+          <img src="./images/DragaoColquida.jpg" alt="Dragão de Cólquida">
+          <span>Dragão de <br> Cólquida</span>
+        </div>
+
+        <div class="node quimera" style="top: 950px; left: 290px;" data-name="Quimera"
+          data-desc="A Quimera é um monstro híbrido com cabeça de leão, corpo de cabra e cauda de serpente."
+          data-img="./images/Quimera.jpg">
+          <img src="./images/Quimera.jpg" alt="Quimera">
+          <span>Quimera</span>
+        </div>
+
+        <div class="node ortros" style="top: 1015px; left: 290px;" data-name="Ortros"
+          data-desc="Ortros é um cão monstruoso de duas cabeças, irmão de Cérbero e guardião do rebanho de Gerião."
+          data-img="./images/Ortros.jpeg">
+          <img src="./images/Ortros.jpeg" alt="Ortros">
+          <span>Ortros</span>
+        </div>
+
+        <div class="node medusa" style="top: 780px; left: 622px;" data-name="Medusa"
+          data-desc="Medusa é uma das três Górgonas, com serpentes no lugar de cabelos. Quem olhasse em seus olhos virava pedra."
+          data-img="./images/Medusa.jpg">
+          <img src="./images/Medusa.jpg" alt="Medusa">
+          <span>Medusa</span>
+        </div>
+
+        <div class="node esteno" style="top: 773px; left: 750px;" data-name="Esteno"
+          data-desc="Esteno é uma das três Górgonas, conhecida por sua força extraordinária."
+          data-img="./images/Esteno.jpg">
+          <img src="./images/Esteno.jpg" alt="Esteno">
+          <span>Esteno</span>
+        </div>
+
+        <div class="node euriale" style="top: 815px; left: 750px;" data-name="Euríale"
+          data-desc="Euríale é uma das três Górgonas, famosa por seus gritos petrificantes."
+          data-img="./images/Euriale.jpeg">
+          <img src="./images/Euriale.jpeg" alt="Euríale">
+          <span>Euríale</span>
+        </div>
+
+        <div class="node dino" style="top: 855px; left: 750px;" data-name="Dino"
+          data-desc="Dino é uma das três Greias, velhas desde o nascimento e compartilhavam um único olho e um dente."
+          data-img="./images/Dino.png">
+          <img src="./images/Dino.png" alt="Dino">
+          <span>Dino</span>
+        </div>
+
+        <div class="node enio" style="top: 895px; left: 750px;" data-name="Ênio"
+          data-desc="Ênio é uma das Greias, irmãs monstruosas que dividiam um olho e um dente entre si."
+          data-img="./images/Enio.png">
+          <img src="./images/Enio.png" alt="Ênio">
+          <span>Ênio</span>
+        </div>
+
+        <div class="node pefredo" style="top: 930px; left: 737px;" data-name="Pefredo"
+          data-desc="Pefredo é a terceira das Greias, filhas de Fórcis e Ceto, símbolo da velhice e da decrepitude."
+          data-img="./images/Pefredo.png">
+          <img src="./images/Pefredo.png" alt="Pefredo">
+          <span>Pefredo</span>
+        </div>
+
+        <div class="node crisaor" style="top: 975px; left: 735px;" data-name="Crisaor"
+          data-desc="Crisaor nasceu do sangue de Medusa quando foi decapitada por Perseu, irmão de Pégaso."
+          data-img="./images/Crisaor.jpg">
+          <img src="./images/Crisaor.jpg" alt="Crisaor">
+          <span>Crisaor</span>
+        </div>
+
+        <div class="node pegaso" style="top: 1020px; left: 735px;" data-name="Pégaso"
+          data-desc="Pégaso é o cavalo alado que surgiu do sangue de Medusa ao ser decapitada, símbolo de liberdade e inspiração."
+          data-img="./images/Pegaso.jpg">
+          <img src="./images/Pegaso.jpg" alt="Pégaso">
+          <span>Pégaso</span>
+        </div>
+
+        <div class="node equidna" style="top: 1055px; left: 513px;" data-name="Equidna"
+          data-desc="Equidna é a mãe de muitos monstros da mitologia grega, metade mulher e metade serpente, companheira de Tifão."
+          data-img="./images/Equidna.jpeg">
+          <img src="./images/Equidna.jpeg" alt="Equidna">
+          <span>Equidna</span>
+        </div>
+
+        <div class="node geriao" style="top: 1120px; left: 513px;" data-name="Gerião"
+          data-desc="Gerião é um gigante de três corpos, guardião de um rebanho de bois, morto por Hércules em seus trabalhos."
+          data-img="./images/Geriao.jpg">
+          <img src="./images/Geriao.jpg" alt="Gerião">
+          <span>Gerião</span>
+        </div>
+
+        <div class="node nereu" style="top: 1328px; left: 440px;" data-name="Nereu"
+          data-desc="Nereu é o velho do mar, filho de Ponto e Gaia, símbolo da sabedoria e da veracidade, pai das Nérites."
+          data-img="./images/Nereu.jpg">
+          <img src="./images/Nereu.jpg" alt="Nereu">
+          <span>Nereu</span>
+        </div>
+
+        <div class="node japeto" style="top: 980px; left: 840px;" data-name="Jápeto"
+          data-desc="Jápeto é um dos Titãs, filho de Urano e Gaia, pai de Prometeu, Epimeteu, Atlas e Menoécio."
+          data-img="./images/Japeto.jpg">
+          <img src="./images/Japeto.jpg" alt="Jápeto">
+          <span>Jápeto</span>
+        </div>
+
+        <div class="node taumas" style="top: 790px; left: 910px;" data-name="Taumas"
+          data-desc="Taumas é uma divindade marinha, filho de Ponto e Gaia, pai de Íris e das Harpias."
+          data-img="./images/Taumas.jpg">
+          <img src="./images/Taumas.jpg" alt="Taumas">
+          <span>Taumas</span>
+        </div>
+
+        <div class="node oceano" style="top: 765px; left: 1070px;" data-name="Oceano"
+          data-desc="Oceano é o Titã do rio que circunda o mundo, esposo de Tétis e pai das Oceânides."
+          data-img="./images/Oceano.jpg">
+          <img src="./images/Oceano.jpg" alt="Oceano">
+          <span>Oceano</span>
+        </div>
+
+        <div class="node tetis" style="top: 765px; left: 1240px;" data-name="Tétis"
+          data-desc="Tétis é uma Titânide, esposa de Oceano e mãe das Oceânides e dos rios."
+          data-img="./images/Tetis.jpg">
+          <img src="./images/Tetis.jpg" alt="Tétis">
+          <span>Tétis</span>
+        </div>
+
+        <div class="node crio" style="top: 810px; left: 1465px;" data-name="Crio"
+          data-desc="Crio é um dos Titãs, filho de Urano e Gaia, associado às constelações e ao poder do tempo."
+          data-img="./images/Crio.jpg">
+          <img src="./images/Crio.jpg" alt="Crio">
+          <span>Crio</span>
+        </div>
+
+        <div class="node hiperion" style="top: 822px; left: 1610px;" data-name="Hipérion"
+          data-desc="Hipérion é o Titã da luz celestial, pai de Hélio, Selene e Eos, com sua irmã Téia."
+          data-img="./images/Hiperion.jpg">
+          <img src="./images/Hiperion.jpg" alt="Hipérion">
+          <span>Hipérion</span>
+        </div>
+
+        <div class="node teia" style="top: 810px; left: 1770px;" data-name="Téia"
+          data-desc="Téia é uma Titânide, esposa de Hipérion e mãe de Hélio (Sol), Selene (Lua) e Eos (Aurora)."
+          data-img="./images/Teia.jpg">
+          <img src="./images/Teia.jpg" alt="Téia">
+          <span>Téia</span>
+        </div>
+
+        <div class="node ceos" style="top: 810px; left: 1910px;" data-name="Ceos"
+          data-desc="Ceos é um dos Titãs, associado à inteligência e ao eixo celestial, esposo de Febe."
+          data-img="./images/Ceos.jpeg">
+          <img src="./images/Ceos.jpeg" alt="Ceos">
+          <span>Ceos</span>
+        </div>
+
+        <div class="node febe" style="top: 810px; left: 2070px;" data-name="Febe"
+          data-desc="Febe é uma Titânide associada à luz da Lua e à profecia, esposa de Ceos e avó de Apolo e Ártemis."
+          data-img="./images/Febe.png">
+          <img src="./images/Febe.png" alt="Febe">
+          <span>Febe</span>
+        </div>
+
+        <div class="node mnemosine" style="top: 810px; left: 2450px;" data-name="Mnemosine"
+          data-desc="Mnemosine é a Titânide da memória, mãe das nove musas com Zeus." data-img="./images/Mnemosine.jpg">
+          <img src="./images/Mnemosine.jpg" alt="Mnemosine">
+          <span>Mnemosine</span>
+        </div>
+
+        <div class="node electra" style="top: 860px; left: 1125px;" data-name="Electra"
+          data-desc="Electra é uma das Oceânides, filha de Oceano e Tétis. Tornou-se mãe de Íris e das Harpias com Taumas."
+          data-img="./images/Electra.jpeg">
+          <img src="./images/Electra.jpeg" alt="Electra">
+          <span>Electra</span>
+        </div>
+
+        <div class="node iris" style="top: 930px; left: 938px;" data-name="Íris"
+          data-desc="Íris é a mensageira dos deuses e personificação do arco-íris, filha de Taumas e Electra."
+          data-img="./images/Iris.jpg">
+          <img src="./images/Iris.jpg" alt="Íris">
+          <span>Íris</span>
+        </div>
+
+        <div class="node aelo" style="top: 930px; left: 1005px;" data-name="Aelo"
+          data-desc="Aelo é uma das Harpias, filhas de Taumas e Electra, espíritos dos ventos tempestuosos."
+          data-img="./images/Aelo.png">
+          <img src="./images/Aelo.png" alt="Aelo">
+          <span>Aelo</span>
+        </div>
+
+        <div class="node ocipite" style="top: 930px; left: 1070px;" data-name="Ocípite"
+          data-desc="Ocípite é uma das Harpias, filhas de Taumas e Electra, que raptavam as almas dos mortos."
+          data-img="./images/Ocipite.jpg">
+          <img src="./images/Ocipite.jpg" alt="Ocípite">
+          <span>Ocípite</span>
+        </div>
+
+        <div class="node celeno" style="top: 930px; left: 1153px;" data-name="Celeno"
+          data-desc="Celeno é uma das Harpias, associada à tempestade e aos ventos destrutivos."
+          data-img="./images/Celeno.jpg">
+          <img src="./images/Celeno.jpg" alt="Celeno">
+          <span>Celeno</span>
+        </div>
+
+        <div class="node calirroe" style="top: 975px; left: 1130px;" data-name="Calírroe"
+          data-desc="Calírroe é uma Oceânide, filha de Oceano e Tétis, mãe de Gerião com Crisaor."
+          data-img="./images/Calirroe.png">
+          <img src="./images/Calirroe.png" alt="Calírroe">
+          <span>Calírroe</span>
+        </div>
+
+        <div class="node climene" style="top: 1025px; left: 1126px;" data-name="Clímene"
+          data-desc="Clímene é uma Oceânide, filha de Oceano e Tétis, esposa de Jápeto e mãe de Prometeu e Atlas."
+          data-img="./images/Climene.jpg">
+          <img src="./images/Climene.jpg" alt="Clímene">
+          <span>Clímene</span>
+        </div>
+
+        <div class="node pleione" style="top: 1080px; left: 1126px;" data-name="Pleione"
+          data-desc="Pleione é uma Oceânide, esposa de Atlas e mãe das Plêiades, ninfas celestes."
+          data-img="./images/Pleione.jpg">
+          <img src="./images/Pleione.jpg" alt="Pleione">
+          <span>Pleione</span>
+        </div>
+
+        <div class="node estige" style="top: 920px; left: 1250px;" data-name="Estige"
+          data-desc="Estige é uma Oceânide, personificação do rio Estige, que marcava o limite entre o mundo dos vivos e o dos mortos."
+          data-img="./images/Estige.jpg">
+          <img src="./images/Estige.jpg" alt="Estige">
+          <span>Estige</span>
+        </div>
+
+        <div class="node nique" style="top: 995px; left: 1244px;" data-name="Nique"
+          data-desc="Nique (ou Nice) é a deusa da vitória, filha de Palas e Estige, companheira de Zeus nas batalhas."
+          data-img="./images/Nique.png">
+          <img src="./images/Nique.png" alt="Nique">
+          <span>Nique</span>
+        </div>
+
+        <div class="node bias" style="top: 995px; left: 1320px;" data-name="Bias"
+          data-desc="Bias é um dos filhos de Palas e Estige, personificação da força e do poder divino."
+          data-img="./images/Bias.jpg">
+          <img src="./images/Bias.jpg" alt="Bias">
+          <span>Bias</span>
+        </div>
+
+        <div class="node zelo" style="top: 995px; left: 1390px;" data-name="Zelo"
+          data-desc="Zelo é a personificação do zelo, dedicação e empenho, filho de Palas e Estige."
+          data-img="./images/Zelo.jpg">
+          <img src="./images/Zelo.jpg" alt="Zelo">
+          <span>Zelo</span>
+        </div>
+
+        <div class="node cratos" style="top: 995px; left: 1460px;" data-name="Cratos"
+          data-desc="Cratos é o deus da força e poder físico, filho de Palas e Estige, leal a Zeus."
+          data-img="./images/Cratos.jpeg">
+          <img src="./images/Cratos.jpeg" alt="Cratos">
+          <span>Cratos</span>
+        </div>
+
+        <div class="node palas" style="top: 920px; left: 1440px;" data-name="Palas"
+          data-desc="Palas é um Titã associado à guerra, sabedoria e bravura, esposo de Estige e pai de Nique, Cratos, Zelo e Bias."
+          data-img="./images/Palas.jpg">
+          <img src="./images/Palas.jpg" alt="Palas">
+          <span>Palas</span>
+        </div>
+
+        <div class="node atlas" style="top: 1075px; left: 995px;" data-name="Atlas"
+          data-desc="Atlas é um dos Titãs, filho de Jápeto e Clímene, condenado por Zeus a sustentar o céu sobre os ombros. Pai de Maia com Pleione."
+          data-img="./images/Atlas.jpg">
+          <img src="./images/Atlas.jpg" alt="Atlas">
+          <span>Atlas</span>
+        </div>
+
+        <div class="node prometeu" style="top: 1245px; left: 987px;" data-name="Prometeu"
+          data-desc="Prometeu é o Titã da astúcia e da inteligência, filho de Jápeto e Clímene, criador dos homens e benfeitor da humanidade ao roubar o fogo dos deuses. Como castigo eterno, foi acorrentado a uma rocha no Cáucaso, onde seu fígado era devorado cotidianamente por uma águia, apenas para vê-lo regenerar-se durante a noite, segundo a lenda, devido à sua imortalidade."
+          data-img="./images/Prometeu.png">
+          <img src="./images/Prometeu.png" alt="Prometeu">
+          <span>Prometeu</span>
+        </div>
+
+        <div class="node epimeteu" style="top: 1297px; left: 990px;" data-name="Epimeteu"
+          data-desc="Epimeteu é um Titã filho de Jápeto e Clímene, irmão de Prometeu, conhecido por conceder dons aos animais."
+          data-img="./images/Epimeteu.jpg">
+          <img src="./images/Epimeteu.jpg" alt="Epimeteu">
+          <span>Epimeteu</span>
+        </div>
+
+        <div class="node menoecio" style="top: 1180px; left: 990px;" data-name="Menoécio"
+          data-desc="Menoécio é um Titã filho de Jápeto e Clímene, castigado por Zeus por sua arrogância, sendo lançado ao Tártaro."
+          data-img="./images/Menoecio.jpg">
+          <img src="./images/Menoecio.jpg" alt="Menoécio">
+          <span>Menoécio</span>
+        </div>
+
+        <div class="node maia" style="top: 1130px; left: 1066px;" data-name="Maia"
+          data-desc="Maia é uma das Plêiades, filha de Atlas e Pleione, mãe de Hermes com Zeus."
+          data-img="./images/Maia.jpg">
+          <img src="./images/Maia.jpg" alt="Maia">
+          <span>Maia</span>
+        </div>
+
+        <div class="node astreu" style="top: 955px; left: 1575px;" data-name="Astreu"
+          data-desc="Astreu é um deus titã, filho de Crio e Euríbia, que personifica o crepúsculo, as estrelas e os planetas."
+          data-img="./images/Astreu.jpg">
+          <img src="./images/Astreu.jpg" alt="Astreu">
+          <span>Astreu</span>
+        </div>
+
+        <div class="node eos" style="top: 955px; left: 1707px;" data-name="Eos"
+          data-desc="Eos é a deusa da aurora, filha de Hipérion e Téia, irmã de Hélio e Selene."
+          data-img="./images/Eos.png">
+          <img src="./images/Eos.png" alt="Eos">
+          <span>Eos</span>
+        </div>
+
+        <div class="node helios" style="top: 957px; left: 1825px;" data-name="Hélio"
+          data-desc="Hélio é o deus do Sol, filho de Hipérion e Téia, irmão de Selene e Eos."
+          data-img="./images/Helio.jpg">
+          <img src="./images/Helio.jpg" alt="Hélio">
+          <span>Hélio</span>
+        </div>
+
+        <div class="node selene" style="top: 957px; left: 1944px;" data-name="Selene"
+          data-desc="Selene é a deusa da Lua, filha de Hipérion e Téia, irmã de Hélio e Eos."
+          data-img="./images/Selene.jpg">
+          <img src="./images/Selene.jpg" alt="Selene">
+          <span>Selene</span>
+        </div>
+
+        <div class="node circe" style="top: 1000px; left: 1785px;" data-name="Circe"
+          data-desc="Circe é uma feiticeira filha do Titã Hélio e da ninfa Perseida, famosa por transformar homens em animais."
+          data-img="./images/Circe.jpg">
+          <img src="./images/Circe.jpg" alt="Circe">
+          <span>Circe</span>
+        </div>
+
+        <div class="node eetes" style="top: 1035px; left: 1785px;" data-name="Eétes"
+          data-desc="Eétes é o rei da Cólquida, filho do Sol (Hélio), pai de Medeia e Guardião do Velocino de Ouro."
+          data-img="./images/Eetes.jpg">
+          <img src="./images/Eetes.jpg" alt="Eétes">
+          <span>Eétes</span>
+        </div>
+
+        <div class="node pasifae" style="top: 1070px; left: 1775px;" data-name="Pasifae"
+          data-desc="Pasifae é filha do Sol (Hélio), esposa de Minos e mãe do Minotauro."
+          data-img="./images/Pasifae.jpg">
+          <img src="./images/Pasifae.jpg" alt="Pasifae">
+          <span>Pasifae</span>
+        </div>
+
+        <div class="node perses" style="top: 1157px; left: 1570px;" data-name="Perses"
+          data-desc="Perses é o rei cruel do Quersoneso Táurico e pai da deusa Hécate, é filho de Hélio e Perseida."
+          data-img="./images/Perses.jpg">
+          <img src="./images/Perses.jpg" alt="Perses">
+          <span>Perses</span>
+        </div>
+
+        <div class="node asteria" style="top: 1156px; left: 1945px;" data-name="Astéria"
+          data-desc="Astéria, filha dos Titãs Céos e Febe, é a deusa das estrelas cadentes e das profecias noturnas, sendo mãe de Hécate com Perses."
+          data-img="./images/Asteria.png">
+          <img src="./images/Asteria.png" alt="Astéria">
+          <span>Astéria</span>
+        </div>
+
+        <div class="node leto" style="top: 1156px; left: 2088px;" data-name="Leto"
+          data-desc="Leto é uma Titânide, deusa da modéstia, maternidade e parto, filha de Ceos e Febe, mãe de Apolo e Ártemis."
+          data-img="./images/Leto.jpg">
+          <img src="./images/Leto.jpg" alt="Leto">
+          <span>Leto</span>
+        </div>
+
+        <div class="node ventos" style="top: 1005px; left: 1590px;" data-name="Ventos"
+          data-desc="Os quatro Ventos são filhos de Astreu e Eos. A cada um é atribuída uma direção cardinal."
+          data-img="./images/Ventos.png">
+          <img src="./images/Ventos.png" alt="Ventos">
+          <span>Ventos</span>
+        </div>
+
+        <div class="node cronos" style="top: 935px; left: 2100px;" data-name="Cronos"
+          data-desc="Cronos é o deus do tempo e rei dos Titãs, filho de Urano e Gaia, pai de Zeus, Héstia, Hera, Hades, Deméter e Poseidon. Temendo ser destronado, Cronos engolia seus filhos assim que eles nasciam."
+          data-img="./images/Cronos.jpg">
+          <img src="./images/Cronos.jpg" alt="Cronos">
+          <span>Cronos</span>
+        </div>
+
+        <div class="node reia" style="top: 935px; left: 2300px;" data-name="Réia"
+          data-desc="Réia é uma Titânide, esposa de Cronos e mãe de Zeus, Héstia, Hera, Hades, Deméter e Poseidon."
+          data-img="./images/Reia.jpg">
+          <img src="./images/Reia.jpg" alt="Réia">
+          <span>Réia</span>
+        </div>
+
+        <div class="node zeus" style="top: 1365px; left: 2257px;" data-name="Zeus"
+          data-desc="Zeus é o deus supremo da mitologia grega, soberano dos céus e do trovão, filho de Cronos e Reia, e líder dos deuses olímpicos."
+          data-img="./images/Zeus.png">
+          <img src="./images/Zeus.png" alt="Zeus">
+          <span>Zeus</span>
+        </div>
+
+        <div class="node hera" style="top: 1365px; left: 2026px;" data-name="Hera"
+          data-desc="Hera é deusa do casamento e da família, filha de Cronos e Réia, irmã e esposa de Zeus."
+          data-img="./images/Hera.png">
+          <img src="./images/Hera.png" alt="Hera">
+          <span>Hera</span>
+        </div>
+
+        <div class="node hades" style="top: 1368px; left: 1652px;" data-name="Hades"
+          data-desc="Hades é deus do submundo, filho de Cronos e Réia, irmão de Zeus e Poseidon."
+          data-img="./images/Hades.png">
+          <img src="./images/Hades.png" alt="Hades">
+          <span>Hades</span>
+        </div>
+
+        <div class="node poseidon" style="top: 1370px; left: 1276px" data-name="Poseidon"
+          data-desc="Poseidon é deus dos mares, filho de Cronos e Réia, irmão de Zeus e Hades."
+          data-img="./images/Poseidon.jpg">
+          <img src="./images/Poseidon.jpg" alt="Poseidon">
+          <span>Poseidon</span>
+        </div>
+
+        <div class="node hestia" style="top: 1368px; left: 1470px;" data-name="Héstia"
+          data-desc="Héstia é deusa virgem do lar, da lareira e da vida doméstica, filha de Cronos e Réia, irmã de Zeus."
+          data-img="./images/Hestia.jpg">
+          <img src="./images/Hestia.jpg" alt="Héstia">
+          <span>Héstia</span>
+        </div>
+
+        <div class="node demeter" style="top: 1368px; left: 1810px;" data-name="Deméter"
+          data-desc="Deméter é deusa da agricultura e da colheita, filha de Cronos e Réia, irmã de Zeus."
+          data-img="./images/Demeter.jpg">
+          <img src="./images/Demeter.jpg" alt="Deméter">
+          <span>Deméter</span>
+        </div>
+
+        <div class="node apolo" style="top: 1200px; left: 2015px;" data-name="Apolo"
+          data-desc="Apolo é deus do Sol, da música e da profecia, filho de Zeus e Leto, irmão de Ártemis."
+          data-img="./images/Apolo.jpg">
+          <img src="./images/Apolo.jpg" alt="Apolo">
+          <span>Apolo</span>
+        </div>
+
+        <div class="node artemis" style="top: 1265px; left: 2010px;" data-name="Ártemis"
+          data-desc="Ártemis é deusa da caça e da Lua, filha de Zeus e Leto, irmã de Apolo."
+          data-img="./images/Artemis.jpg">
+          <img src="./images/Artemis.jpg" alt="Ártemis">
+          <span>Ártemis</span>
+        </div>
+
+        <div class="node atena" style="top: 1220px; left: 1855px;" data-name="Atena"
+          data-desc="Atena é deusa da sabedoria, estratégia e guerra justa, filha de Zeus, nascida da cabeça do pai totalmente armada."
+          data-img="./images/Atena.jpeg">
+          <img src="./images/Atena.jpeg" alt="Atena">
+          <span>Atena</span>
+        </div>
+
+        <div class="node hermes" style="top: 1220px; left: 1460px;" data-name="Hermes"
+          data-desc="Hermes é deus mensageiro, do comércio e dos ladrões, filho de Zeus e Maia."
+          data-img="./images/Hermes.png">
+          <img src="./images/Hermes.png" alt="Hermes">
+          <span>Hermes</span>
+        </div>
+
+        <div class="node quiron" style="top: 1040px; left: 2075px;" data-name="Quíron"
+          data-desc="Quíron é o centauro sábio e curador, professor de muitos heróis gregos."
+          data-img="./images/Quiron.jpg">
+          <img src="./images/Quiron.jpg" alt="Quíron">
+          <span>Quíron</span>
+        </div>
+
+        <div class="node temis" style="top: 935px; left: 2550px;" data-name="Têmis"
+          data-desc="Têmis é deusa Titanide que personifica a justiça, a lei e a ordem, além de ser a guardiã dos juramentos e da lei natural. Filha de Urano (Céu) e Gaia (Terra), ela aconselhava Zeus e era considerada a segunda esposa do deus."
+          data-img="./images/Temis.jpg">
+          <img src="./images/Temis.jpg" alt="Têmis">
+          <span>Têmis</span>
+        </div>
+
+        <div class="node Hécate" style="top: 1220px; left: 1681px;" data-name="Hécate"
+          data-desc="Hécate é deusa da magia, bruxaria, noite, lua, encruzilhadas e submundo. Retratada com três faces ou corpos, simbolizando sua capacidade de ver passado, presente e futuro. Filha dos Titãs Perses e Astéria."
+          data-img="./images/Hecate.png">
+          <img src="./images/Hecate.png" alt="Hécate">
+          <span>Hécate</span>
+        </div>
+
+        <div class="node musas" style="top: 1060px; left: 2477px;" data-name="Musas"
+          data-desc="As Musas são nove deusas inspiradoras das artes e das ciências, filhas de Zeus e Mnemosine. Hesíodo, em seu poema Teogonia, descreve o encontro com elas no Monte Hélicon, que lhe deram a inspiração e a capacidade de compor a própria obra."
+          data-img="./images/Musas.jpg">
+          <img src="./images/Musas.jpg" alt="Musas">
+          <span>Musas</span>
+        </div>
+
+        <div class="node horas" style="top: 1060px; left: 2607px;" data-name="Horas"
+          data-desc="As Horas são deusas associadas à ordem, ao tempo e às estações do ano, filhas de Zeus e Têmis."
+          data-img="./images/Horas.jpg">
+          <img src="./images/Horas.jpg" alt="Horas">
+          <span>Horas</span>
+        </div>
+
+        <div class="node perseida" style="top: 1096px; left: 1235px;" data-name="Perseida"
+          data-desc="Perseida é uma Oceânide e mãe da feiticeira Circe, casada com o deus-sol Hélio e filha dos titãs Oceano e Tétis."
+          data-img="./images/Perseida.png">
+          <img src="./images/Perseida.png" alt="Perseida">
+          <span>Perseida</span>
+        </div>
+
+        <div class="node filira" style="top: 1193px; left: 1251px;" data-name="Filira"
+          data-desc="Filira é uma Oceânide que se uniu a Cronos, tornando-se mãe do sábio centauro Quíron."
+          data-img="./images/Filira.jpg">
+          <img src="./images/Filira.jpg" alt="Filira">
+          <span>Filira</span>
+        </div>
+
+        <div class="node metis" style="top: 1311px; left: 1251px;" data-name="Métis"
+          data-desc="Métis é um Titânide da sabedoria e prudência, primeira esposa de Zeus e mãe de Atena."
+          data-img="./images/Metis.jpeg">
+          <img src="./images/Metis.jpeg" alt="Métis">
+          <span>Métis</span>
+        </div>
+
+        <div class="node doris" style="top: 1344px; left: 1138px;" data-name="Dóris"
+          data-desc="Dóris é uma Oceânide esposa de Nereu e mãe das cinquenta Nereidas, deusas do mar calmo."
+          data-img="./images/Doris.jpg">
+          <img src="./images/Doris.jpg" alt="Dóris">
+          <span>Dóris</span>
+        </div>
+
+        <div class="node anfitrite" style="top: 1459px; left: 1017px;" data-name="Anfitrite"
+          data-desc="Anfitrite é uma Nereida esposa de Poseidon, rainha dos mares e mãe de Tritão." data-img="./images/Anfitrite.jpeg">
+          <img src="./images/Anfitrite.jpeg" alt="Anfitrite">
+          <span>Anfitrite</span>
+        </div>
+
+        <div class="node nerites" style="top: 1519px; left: 1017px;" data-name="Nérites"
+          data-desc="Nérites é o jovem deus marinho, filho de Poseidon, transformado em concha ou flor marinha."
+          data-img="./images/Nerites.png">
+          <img src="./images/Nerites.png" alt="Nérites">
+          <span>Nérites</span>
+        </div>
+
+        <div class="node tritao" style="top: 1500px; left: 1294px;" data-name="Tritão"
+          data-desc="Tritão é filho de Poseidon e Anfitrite, deus mensageiro dos mares com corpo metade humano e metade peixe."
+          data-img="./images/Tritao.jpg">
+          <img src="./images/Tritao.jpg" alt="Tritão">
+          <span>Tritão</span>
+        </div>
+
+        <div class="node cimopoleia" style="top: 1560px; left: 1285px;" data-name="Cimopoleia"
+          data-desc="Cimopeleia é filha de Poseidon, deusa das tempestades marítimas."
+          data-img="./images/Cimopoleia.png">
+          <img src="./images/Cimopoleia.png" alt="Cimopoleia">
+          <span>Cimopoleia</span>
+        </div>
+
+        <div class="node arion" style="top: 1500px; left: 1488px;" data-name="Árion"
+          data-desc="Árion é o cavalo imortal nascido da união de Poseidon e Deméter, símbolo de velocidade e poder divino."
+          data-img="./images/Arion.jpg">
+          <img src="./images/Arion.jpg" alt="Árion">
+          <span>Árion</span>
+        </div>
+
+        <div class="node despina" style="top: 1558px; left: 1485px;" data-name="Despina"
+          data-desc="Despina é filha de Deméter e Poseidon, deusa associada aos mistérios e à fertilidade."
+          data-img="./images/Despina.jpg">
+          <img src="./images/Despina.jpg" alt="Despina">
+          <span>Despina</span>
+        </div>
+
+        <div class="node ares" style="top: 1450px; left: 2050px;" data-name="Ares"
+          data-desc="Ares é filho de Zeus e Hera, deus da guerra, da fúria e do combate." data-img="./images/Ares.jpg">
+          <img src="./images/Ares.jpg" alt="Ares">
+          <span>Ares</span>
+        </div>
+
+        <div class="node hefesto" style="top: 1504px; left: 2050px;" data-name="Hefesto"
+          data-desc="Hefesto é o deus do fogo e da metalurgia, filho de Hera, artesão dos deuses e criador de suas armas."
+          data-img="./images/Hefesto.jpg">
+          <img src="./images/Hefesto.jpg" alt="Hefesto">
+          <span>Hefesto</span>
+        </div>
+
+        <div class="node hebe" style="top: 1558px; left: 2050px;" data-name="Hebe"
+          data-desc="Hebe é filha de Zeus e Hera, deusa da juventude e copeira dos deuses do Olimpo."
+          data-img="./images/Hebe.jpg">
+          <img src="./images/Hebe.jpg" alt="Hebe">
+          <span>Hebe</span>
+        </div>
+
+        <div class="node ilitia" style="top: 1610px; left: 2050px;" data-name="Ilítia"
+          data-desc="Ilítia é filha de Zeus e Hera, deusa dos partos e da proteção às mulheres em trabalho de parto."
+          data-img="./images/Ilitia.jpg">
+          <img src="./images/Ilitia.jpg" alt="Ilítia">
+          <span>Ilítia</span>
+        </div>
+
+        <div class="node persefone" style="top: 1680px; left: 2050px;" data-name="Perséfone"
+          data-desc="Perséfone é filha de Zeus e Deméter, raptada por Hades para ser rainha do Submundo, símbolo dos ciclos da vida e morte."
+          data-img="./images/Persefone.jpg">
+          <img src="./images/Persefone.jpg" alt="Perséfone">
+          <span>Perséfone</span>
+        </div>
+         
+      </main>
+    </div>
+  </div>
+
+  <!-- Botão "Mais informações" -->
+  <div id="more-info-btn">Mais informações</div>
+
+  <!-- Modal centralizado -->
+  <div id="more-info-modal">
+    <div class="modal-content">
+      <p>
+      A pesquisa deste trabalho teve como referência principal a obra 
+      <a href="https://www.assisprofessor.com.br/documentos/livros/hesiodo_teogonia.pdf" target="_blank">Teogonia: a origem dos deuses</a>, do poeta grego Hesíodo, a qual forneceu a base para a compreensão das origens e relações entre os deuses da mitologia grega.
+    </p>
+    <p>
+      Para a construção visual da árvore genealógica, a principal fonte consultada foi o vídeo 
+      <a href="https://youtu.be/SsE0UCle4C0?si=VExYaGzT9KkRBN1B" target="_blank">Árvore genealógica completa da mitologia grega – deuses & titãs</a>, do canal Segredos do Mundo, disponível no YouTube, o qual serviu como guia visual para a disposição e organização dos elementos.
+    </p>
+    <p>
+      O trabalho foi elaborado por meio de recursos artísticos disponibilizados na plataforma Canva e estruturado com linguagens de programação web, incluindo HTML, CSS e JavaScript, garantindo a interatividade e a apresentação visual das informações.
+    </p>
+    <p>
+      <strong>Interatividade:</strong> Ao clicar sobre cada deus representado na árvore genealógica, é possível visualizar breves informações sobre eles.
+    </p>
+    <p>
+      <strong>Acessibilidade:</strong> Este site possui suporte para Libras através do plugin <strong>VLibras</strong>, do Governo Federal. Basta clicar no botão flutuante do VLibras que aparecerá na tela para que o conteúdo seja traduzido em Libras.
+    </p>
+      <button id="close-more-info">Fechar</button>
+    </div>
+  </div>
+
+</div>
+
+<!-- VLibras -->
+<div vw class="enabled">
+  <div vw-access-button class="active"></div>
+  <div vw-plugin-wrapper></div>
+</div>
+<script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+<script>
+  new window.VLibras.Widget('https://vlibras.gov.br/app');
+</script>
+
+  <script src="script.js"></script>
+</body>
+
+</html>

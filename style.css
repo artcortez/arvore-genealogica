@@ -1,0 +1,511 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+  background: #736048;
+}
+
+/* Modal de boas-vindas moderno */
+#welcome-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* fundo semi-transparente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#welcome-modal .modal-content {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 50px;
+  max-width: 600px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+  animation: fadeIn 0.5s ease-out;
+}
+
+#welcome-modal h1 {
+  font-size: 2.2rem;
+  color: #2c3e50;
+  margin-bottom: 15px;
+}
+
+#welcome-modal h2 {
+  font-size: 1.4rem;
+  color: #34495e;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+#welcome-modal p {
+  color: #555;
+  line-height: 1.5;
+  margin: 5px 0;
+}
+
+#welcome-modal button {
+  margin-top: 25px;
+  padding: 12px 30px;
+  font-size: 1rem;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+#welcome-modal button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+/* Animação suave de entrada */
+@keyframes fadeIn {
+  from {opacity: 0; transform: scale(0.9);}
+  to {opacity: 1; transform: scale(1);}
+}
+
+/* Estilo do título fixo no canto superior esquerdo */
+#site-title {
+  position: fixed;
+  top: 20px;      /* distância do topo */
+  left: 20px;     /* distância da esquerda */
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: #2c3e50;
+  background: rgba(255, 255, 255, 0.8); /* leve fundo semi-transparente */
+  padding: 10px 15px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  z-index: 999; /* acima de outros elementos */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ===== Área navegável ===== */
+#viewport {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
+  background: #736048;
+}
+
+#canvas {
+  width: 3000px;
+  height: 2000px;
+  background: url('./images/background2.png') center center / contain no-repeat;
+  transform-origin: 0 0;
+  cursor: grab;
+  position: relative;
+}
+
+.node {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  cursor: pointer;
+  background: transparent;
+  color: white;
+}
+
+.node img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 2px solid white;
+  object-fit: cover;
+}
+
+.node span {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: white;
+}
+
+/* ===== Modal de informação do node ===== */
+#info-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+#info-modal .modal-content {
+  background: #111;
+  color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 500px;
+  text-align: center;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+}
+
+#info-modal .modal-content img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 1rem;
+}
+
+#info-modal .modal-content button {
+  margin-top: 1rem;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
+
+.node.oureas,
+.node.hiperion,
+.node.mnemosine,
+.node.atlas,
+.node.maia,
+.node.menoecio,
+.node.prometeu,
+.node.epimeteu {
+    padding: 4px 8px; /* reduz a caixa */
+    gap: 5px;         /* reduz o espaço entre a imagem e o nome */
+}
+
+.node.oureas img,
+.node.hiperion img,
+.node.mnemosine img,
+.node.atlas img,
+.node.maia img,
+.node.menoecio img,
+.node.prometeu img,
+.node.epimeteu img {
+    width: 40px;       /* reduz o tamanho da imagem */
+    height: 40px;
+}
+
+.node.oureas span,
+.node.hiperion span,
+.node.mnemosine span,
+.node.atlas span,
+.node.maia span,
+.node.menoecio span,
+.node.prometeu span,
+.node.epimeteu span {
+    font-size: 0.9rem; /* reduz levemente o tamanho do texto */
+}
+
+/* ciclopes */
+.node.ciclopes,
+.node.hecatonquiros,
+.node.afrodite,
+.node.cerbero,
+.node.hidra,
+.node.leao,
+.node.dragaocolquida,
+.node.quimera,
+.node.ortros,
+.node.medusa,
+.node.esteno,
+.node.euriale,
+.node.dino,
+.node.enio,
+.node.pefredo,
+.node.crisaor,
+.node.pegas,
+.node.electra,
+.node.iris,
+.node.aelo,
+.node.ocipite,
+.node.celeno,
+.node.calirroe,
+.node.climene,
+.node.pleione,
+.node.estige,
+.node.nique,
+.node.bias,
+.node.zelo,
+.node.cratos,
+.node.palas,
+.node.astreu,
+.node.eos,
+.node.helios,
+.node.selene,
+.node.circe,
+.node.eetes,
+.node.pasifae,
+.node.perses,
+.node.asteria,
+.node.leto,
+.node.perseida,
+.node.filira,
+.node.metis,
+.node.doris,
+.node.anfitrite,
+.node.nerites,
+.node.tritao,
+.node.cimopoleia,
+.node.arion,
+.node.despina,
+.node.ares,
+.node.hefesto,
+.node.hebe,
+.node.ilitia,
+.node.persefone {
+    padding: 3px 7px; /* reduz a caixa */
+    gap: 3px;         /* reduz o espaço entre a imagem e o nome */
+}
+
+.node.ciclopes img,
+.node.hecatonquiros img,
+.node.afrodite img,
+.node.cerbero img,
+.node.hidra img,
+.node.leao img,
+.node.dragaocolquida img,
+.node.quimera img,
+.node.ortros img,
+.node.medusa img,
+.node.esteno img,
+.node.euriale img,
+.node.dino img,
+.node.enio img,
+.node.pefredo img,
+.node.crisaor img,
+.node.pegaso img,
+.node.electra img,
+.node.iris img,
+.node.aelo img,
+.node.ocipite img,
+.node.celeno img,
+.node.calirroe img,
+.node.climene img,
+.node.pleione img,
+.node.estige img,
+.node.nique img,
+.node.bias img,
+.node.zelo img,
+.node.cratos img,
+.node.palas img,
+.node.astreu img,
+.node.eos img,
+.node.helios img,
+.node.selene img,
+.node.circe img,
+.node.eetes img,
+.node.pasifae img,
+.node.perses img,
+.node.asteria img,
+.node.leto img,
+.node.perseida img,
+.node.filira img,
+.node.metis img,
+.node.doris img,
+.node.anfitrite img,
+.node.nerites img,
+.node.tritao img,
+.node.cimopoleia img,
+.node.arion img,
+.node.despina img,
+.node.ares img,
+.node.hefesto img,
+.node.hebe img,
+.node.ilitia img,
+.node.persefone img {
+  width: 30px;
+  height: 30px;
+}
+
+.node.ciclopes span,
+.node.hecatonquiros span,
+.node.afrodite span,
+.node.cerbero span,
+.node.hidra span,
+.node.leao span,
+.node.dragaocolquida span,
+.node.quimera span,
+.node.ortros span,
+.node.medusa span,
+.node.esteno span,
+.node.euriale span,
+.node.dino span,
+.node.enio span,
+.node.pefredo span,
+.node.crisaor span,
+.node.pegaso span,
+.node.electra span,
+.node.iris span,
+.node.aelo span,
+.node.ocipite span,
+.node.celeno span,
+.node.calirroe span,
+.node.climene span,
+.node.pleione span,
+.node.estige span,
+.node.nique span,
+.node.bias span,
+.node.zelo span,
+.node.cratos span,
+.node.palas span,
+.node.astreu span,
+.node.eos span,
+.node.helios span,
+.node.selene span,
+.node.circe span,
+.node.eetes span,
+.node.pasifae span,
+.node.perses span,
+.node.asteria span,
+.node.leto span,
+.node.perseida span,
+.node.filira span,
+.node.metis span,
+.node.doris span,
+.node.anfitrite span,
+.node.nerites span,
+.node.tritao span,
+.node.cimopoleia span,
+.node.arion span,
+.node.despina span,
+.node.ares span,
+.node.hefesto span,
+.node.hebe span,
+.node.ilitia span,
+.node.persefone span {
+  font-size: 0.8rem;
+}
+
+/* Nodes padrão grandes (como Caos, Gaia, Urano, Tártaro, Eros, Érebo, Nix) */
+.node.eter,
+.node.hemera,
+.node.forcis {
+    padding: 8px 12px;
+    gap: 10px;
+}
+
+.node.eter img,
+.node.hemera img,
+.node.forcis img {
+    width: 60px;
+    height: 60px;
+}
+
+.node.eter span,
+.node.hemera span,
+.node.forcis span {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Hespérides, Moiras e Nêmesis com nome embaixo da foto */
+.node.furias,
+.node.hesperides,
+.node.moiras,
+.node.nemesis,
+.node.musas,
+.node.horas {
+    flex-direction: column; /* coloca imagem em cima e texto embaixo */
+    align-items: center;    /* centraliza */
+    text-align: center;
+    padding: 6px;           /* ajusta o espaço da caixa */
+    gap: 5px;               /* espaço entre imagem e nome */
+}
+
+.node.furias img,
+.node.hesperides img,
+.node.moiras img,
+.node.nemesis img,
+.node.musas img,
+.node.horas img {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+}
+
+.node.furias span,
+.node.hesperides span,
+.node.moiras span,
+.node.nemesis span,
+.node.musas span,
+.node.horas span {
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: white;
+}
+
+/* Caixa "Mais informações" fixa no canto inferior direito do campo de visão */
+#more-info-btn {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: all 0.3s ease;
+}
+
+#more-info-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  background: linear-gradient(135deg, #2575fc, #6a11cb);
+}
+
+/* Modal centralizado para informações adicionais */
+#more-info-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 2000;
+}
+
+#more-info-modal .modal-content {
+  background: #fff;
+  color: #333;
+  padding: 2rem;
+  border-radius: 12px;
+  max-width: 600px;
+  width: 90%;
+  text-align: justify;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.7);
+  line-height: 1.5;
+}
+
+#more-info-modal .modal-content a {
+  color: #2575fc;
+  text-decoration: underline;
+}
+
+#more-info-modal .modal-content button {
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+}
